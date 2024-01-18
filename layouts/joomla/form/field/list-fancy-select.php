@@ -30,6 +30,7 @@ extract($displayData);
  * @var   string   $id              DOM id of the field.
  * @var   string   $label           Label of the field.
  * @var   string   $labelclass      Classes to apply to the label.
+ * @var   string   $maxresults      Maximum amount of search results to be displayed.
  * @var   boolean  $multiple        Does this field support multiple values?
  * @var   string   $name            Name of the input field.
  * @var   string   $onchange        Onchange attribute for the field.
@@ -55,6 +56,7 @@ $attr .= !empty($size) ? ' size="' . $size . '"' : '';
 $attr .= $multiple ? ' multiple' : '';
 $attr .= $autofocus ? ' autofocus' : '';
 $attr .= $onchange ? ' onchange="' . $onchange . '"' : '';
+$attr .= $maxresults ? ' data-max-results="' . $maxresults . '"' : '';
 $attr .= $dataAttribute;
 
 // To avoid user's confusion, readonly="readonly" should imply disabled="disabled".
